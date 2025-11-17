@@ -14,5 +14,52 @@
       "nome": "Usuario Comum",
       "email": "user@abc.com"
     }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "title": "Trilha do Cânion",
+      "description": "Percurso entre rochas e leito de rio até o cânion.",
+      "image": "./trilha.jpg",
+      "difficulty": "Média",
+      "distanceKm": 6.5,
+      "durationMin": 180,
+      "bestSeason": "Maio a Agosto",
+      "location": "Conceição do Mato Dentro - MG",
+      "photos": [
+        { "src": "./trilha.jpg", "title": "Trecho da trilha" },
+        { "src": "./trechoDoRioPedras.jpg", "title": "Rio com pedras" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Poço da Cachoeira",
+      "description": "Chegada ao poço principal com vista da queda.",
+      "image": "./poço.jpg",
+      "difficulty": "Difícil",
+      "distanceKm": 18,
+      "durationMin": 420,
+      "bestSeason": "Junho a Setembro",
+      "location": "Parque do Tabuleiro - MG",
+      "photos": [
+        { "src": "./poço.jpg", "title": "Poço principal" },
+        { "src": "./riachoQuedaCachoeira.jpg", "title": "Riacho e queda" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Mirante Superior",
+      "description": "Vista panorâmica para fotografias e contemplação.",
+      "image": "./mirante.jpg",
+      "difficulty": "Média",
+      "distanceKm": 4.2,
+      "durationMin": 150,
+      "bestSeason": "Ano todo",
+      "location": "Serra do Espinhaço - MG",
+      "photos": [
+        { "src": "./mirante.jpg", "title": "Mirante superior" },
+        { "src": "./PanoramaMontanha.jpg", "title": "Panorama das montanhas" }
+      ]
+    }
   ]
 }
