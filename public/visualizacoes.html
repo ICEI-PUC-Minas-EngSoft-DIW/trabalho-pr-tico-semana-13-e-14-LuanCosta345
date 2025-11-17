@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizações - Cachoeira do Tabuleiro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <a class="navbar-brand logo" href="index.html">Cachoeira do Tabuleiro</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#sobre">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#trilhas">Trilhas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#galeria">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#planeje">Planeje</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="visualizacoes.html">Visualizações</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="site-main" role="main">
+        <section class="py-5">
+            <div class="container">
+                <h1 class="display-5 fw-bold text-primary mb-4">Apresentação dos Dados</h1>
+                <p class="lead mb-5">Gráficos dinâmicos baseados nos itens cadastrados via CRUD.</p>
+
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow h-100">
+                            <div class="card-body">
+                                <h5 class="fw-semibold mb-3">Trilhas por Localização</h5>
+                                <canvas id="chartByLocation" height="200" aria-label="Gráfico de barras por localização"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow h-100">
+                            <div class="card-body">
+                                <h5 class="fw-semibold mb-3">Distribuição por Dificuldade</h5>
+                                <canvas id="chartByDifficulty" height="200" aria-label="Gráfico de pizza por dificuldade"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-info mt-4 d-none" id="emptyState" role="alert">
+                    Ainda não há dados cadastrados. Utilize a seção de CRUD na Home para adicionar itens.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer bg-dark text-light py-4" role="contentinfo">
+        <div class="container">
+            <p class="mb-0 text-center">&copy; 2025 Trilha Cachoeira do Tabuleiro — Projeto acadêmico.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" integrity="sha384-2Y8KkB4xkmlrqzEA3mIy3JYk3f0xFQ8dO6QVu0x3kpF+glH0VO/nP6hZmqkF9gUp" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <script src="charts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
+
