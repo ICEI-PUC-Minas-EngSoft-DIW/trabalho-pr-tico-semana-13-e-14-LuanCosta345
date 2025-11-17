@@ -1,4 +1,10 @@
-const API_URL = '/items';
+const API_URL = (function () {
+  const isLaragonHost = window.location.hostname.endsWith('.test');
+  const isLocalhostButNot3000 = window.location.hostname === 'localhost' && window.location.port !== '3000';
+  const shouldPointToJsonServer = isLaragonHost || isLocalhostButNot3000 || window.location.protocol === 'file:';
+  const base = shouldPointToJsonServer ? 'http://localhost:3000' : '';
+  return `${base}/items`;
+})();
 
 document.addEventListener('DOMContentLoaded', async () => {
   console.log('App inicializado');
@@ -207,10 +213,9 @@ function renderAuthorSection(container) {
   p.textContent = 'Trabalho acadêmico desenvolvido por Luan Costa. Projeto base para a próxima etapa com consumo de APIs e funcionalidades avançadas.';
   const list = document.createElement('ul');
   list.className = 'mb-0';
-  const li1 = document.createElement('li'); li1.textContent = 'Curso: Programação Web';
-  const li2 = document.createElement('li'); li2.textContent = 'Semestre: 2025/2';
-  const li3 = document.createElement('li'); li3.textContent = 'Contato: luan@example.com';
-  list.appendChild(li1); list.appendChild(li2); list.appendChild(li3);
+  const li1 = document.createElement('li'); li1.textContent = 'Curso: Engenharia de Software';
+  const li2 = document.createElement('li'); li2.textContent = 'Matrícula: 1496937';
+  list.appendChild(li1); list.appendChild(li2);
   body.appendChild(h3);
   body.appendChild(p);
   body.appendChild(list);
